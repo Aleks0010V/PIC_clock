@@ -1,9 +1,11 @@
-/* 
+/*
  * File:   lcd.h
  * Author: Aleksandr Valentirov
  *
  * Created on March 8, 2020, 1:51 PM
  */
+
+#include <stdint.h>
 
 #ifndef LCD_H
 #define	LCD_H
@@ -13,16 +15,15 @@ extern "C" {
 #endif
 
     void lcd_send_data(unsigned char data);
-    void lcd_send_cmd(unsigned char cmd);
+    void lcd_send_cmd(uint8_t cmd);
     void lcd_init(void);
-    void lcd_set_cursor(unsigned char r, unsigned char c);
-    void lcd_write_ascii(unsigned char *str, size_t data_size);
-    void lcd_write_string(unsigned char *str);
-    void clear_n_cells(unsigned char row, unsigned char pos, unsigned char n);
+    void lcd_set_cursor(uint8_t r, unsigned char c);
+    void lcd_write_ascii(uint8_t *str, size_t data_size);
+    void lcd_write_string(uint8_t *str);
+    void clear_n_cells(uint8_t row, uint8_t pos, uint8_t n);
 
 #ifdef	__cplusplus
 }
 #endif
 
 #endif	/* LCD_H */
-
