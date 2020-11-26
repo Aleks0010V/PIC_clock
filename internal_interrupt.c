@@ -23,7 +23,7 @@ void int_ISR(void) {
 //    clear_a2f();
 
     uint8_t time_string[8];
-    char date_string[10];
+    uint8_t date_string[10];
     get_time_string(time_string);
     get_date_string(date_string);
     lcd_set_cursor(1, 1);

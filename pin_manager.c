@@ -15,7 +15,6 @@ void pin_Initiasize(void) {
     LATB = 0; // lcd parallel data bus
     LATC = 0;
     LATD = 0;
-    LATCbits.LATC4 = 1; // SS1 select should be high on start
 
     // 0 - digital, 1 - analog
     ANSELA = 0;
@@ -24,7 +23,7 @@ void pin_Initiasize(void) {
     ANSELD = 0;
 
     // 0 - output, 1 - input
-    TRISA = 0b01000000;
+    TRISA = 0b01001110;
     TRISB = 0;
     // RC2 - MSSP1 I2C SDA.
     // RC3 - MSSP1 I2C SCL.

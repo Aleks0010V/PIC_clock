@@ -49,7 +49,7 @@ void lcd_send_data(uint8_t data){
 }
 
 // sets display`s light, cursor visibility and cursor blinking
-void display_controll(char d, char c, char b){
+void display_controll(uint8_t d, uint8_t c, uint8_t b){
     // assembling final command
     uint8_t cmd = (8 | (d << 2)) | (8 | (c << 1)) | (8 | b);
     lcd_send_cmd(cmd);

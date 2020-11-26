@@ -21,6 +21,7 @@ extern "C" {
     void lcd_write_ascii(uint8_t *str, size_t data_size);
     void lcd_write_string(uint8_t *str);
     void clear_n_cells(uint8_t row, uint8_t pos, uint8_t n);
+    void display_controll(uint8_t d, uint8_t c, uint8_t b);
 
 #ifdef	__cplusplus
 }
